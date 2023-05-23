@@ -22,7 +22,5 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'kammana-docker-hub'
-        repository: 'kammana/api'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'

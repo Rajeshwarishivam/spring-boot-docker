@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rajeshwarishivamspringbootdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rajeshwarishivamspringbootdocker
+  template:
+    metadata:
+      labels:
+        app: rajeshwarishivamspringbootdocker 
+    spec:
+      containers:
+        - name: rajeshwarishivamspringbootdocker 
+          image: container1test.azurecr.io/rajeshwarishivamspringbootdocker
+          ports:
+          - containerPort: 8080

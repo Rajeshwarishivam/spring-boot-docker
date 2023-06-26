@@ -74,7 +74,7 @@ stages:
               strategy: 'canary'
               percentage: '25'
               manifests: |
-                      'https://github.com/Rajeshwarishivam/spring-boot-docker/blob/main/manifests/deployment.yml'
-                      'https://github.com/Rajeshwarishivam/spring-boot-docker/blob/main/manifests/service.yml'
+                     /home/vsts/work/1/manifests/my-deployment-file.yaml
+                     /home/vsts/work/1/manifests/my-service-file.yaml
               containers: 'Container1test/api:$(tag)'
 

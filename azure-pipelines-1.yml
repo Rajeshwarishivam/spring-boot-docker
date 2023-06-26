@@ -73,8 +73,6 @@ stages:
               kubernetesServiceConnection: 'connectiontokub'
               strategy: 'canary'
               percentage: '25'
-              manifests: |
-                manifests/deployment.yml
-                manifests/service.yml
+              manifests: 'https://github.com/Rajeshwarishivam/spring-boot-docker/blob/main/manifests/deployment.ymlhttps://github.com/Rajeshwarishivam/spring-boot-docker/blob/main/manifests/service.yml'
               containers: 'Container1test/api:$(tag)'
 

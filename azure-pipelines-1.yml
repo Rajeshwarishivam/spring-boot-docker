@@ -74,7 +74,7 @@ stages:
               strategy: 'canary'
               percentage: '25'
               manifests: |
-                     $(Pipeline.Workspace)/manifests/deployment.yml
-                     $(Pipeline.Workspace)/manifests/service.yml
+                     $(self)/manifests/deployment.yml
+                     $(self)/manifests/service.yml
               containers: 'Container1test/api:$(tag)'
 

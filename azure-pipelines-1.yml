@@ -63,7 +63,7 @@ stages:
               action: 'createSecret'
               kubernetesServiceConnection: 'connectiontokub'
               secretType: 'dockerRegistry'
-              secretName: 'PullSec'
+              secretName: 'my-pull-secret'
               dockerRegistryEndpoint: 'test'
 
           - task: KubernetesManifest@0
@@ -77,5 +77,5 @@ stages:
                 $(Pipeline.Workspace)/manifests/deployment.yml
                 $(Pipeline.Workspace)/manifests/service.yml
               containers: '$(containerRegistry)/$(imageRepository):$(tag)'
-              imagePullSecrets: 'PullSec'
+              imagePullSecrets: 'my-pull-secret'
 

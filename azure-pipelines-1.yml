@@ -6,7 +6,7 @@ trigger:
 - main
 
 resources:
-- repo: self
+- repo: spring-boot-docker
 
 variables:
 
@@ -74,7 +74,7 @@ stages:
               strategy: 'canary'
               percentage: '25'
               manifests: |
-                     $(self)/manifests/deployment.yml
-                     $(self)/manifests/service.yml
+                     $(spring-boot-docker)/manifests/deployment.yml
+                     $(spring-boot-docker)/manifests/service.yml
               containers: 'Container1test/api:$(tag)'
 

@@ -6,7 +6,7 @@ trigger:
 - main
 
 resources:
-- repo: spring-boot-docker
+- repo: 'spring-boot-docker'
 
 variables:
 

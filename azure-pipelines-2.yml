@@ -69,12 +69,13 @@ stages:
           - task: KubernetesManifest@0
             displayName: Deploy to Kubernetes cluster
             inputs:
-              action: deploy
+              action: 'deploy'
+              kubernetesServiceConnection: 'connectiontokub'
+              strategy: 'canary'
+              percentage: '0'
               manifests: |
-                $(Pipeline.Workspace)/manifests/deployment.yml
-                $(Pipeline.Workspace)/manifests/service.yml
-              imagePullSecrets: |
-                my-pull-secret
-              containers: |
-                Container1test/api:$(tag)
+                $(Pipeline.Workspace)/spring-boot-docker/manifests/deployment.yml
+                $(Pipeline.Workspace)/spring-boot-docker/manifests/service.yml
+              containers: 'Container1test/api:$(tag)'
+              imagePullSecrets: 'my-pull-secret'
 

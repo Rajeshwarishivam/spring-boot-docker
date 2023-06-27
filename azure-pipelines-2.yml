@@ -71,8 +71,8 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                ./manifests/deployment.yml
-                ./manifests/service.yml
+                $(Build.SourcesDirectory)/manifests/deployment.yml
+                $(Build.SourcesDirectory)/manifests/service.yml
               imagePullSecrets: |
                 my-pull-secret
               containers: |

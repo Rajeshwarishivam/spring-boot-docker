@@ -71,8 +71,8 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                /spring-boot-docker/manifests/deployment.yml
-                /spring-boot-docker/manifests/service.yml
+                https://github.com/Rajeshwarishivam/spring-boot-docker/blob/main/manifests/deployment.yml
+                https://github.com/Rajeshwarishivam/spring-boot-docker/blob/main/manifests/service.yml
               imagePullSecrets: |
                 my-pull-secret
               containers: |
